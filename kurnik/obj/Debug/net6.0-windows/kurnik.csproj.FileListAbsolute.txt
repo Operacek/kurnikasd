@@ -1,0 +1,54 @@
+C:\Users\operak\source\repos\kurnik\kurnik\bin\Debug\net6.0-windows\kurnik.exe
+C:\Users\operak\source\repos\kurnik\kurnik\bin\Debug\net6.0-windows\kurnik.deps.json
+C:\Users\operak\source\repos\kurnik\kurnik\bin\Debug\net6.0-windows\kurnik.runtimeconfig.json
+C:\Users\operak\source\repos\kurnik\kurnik\bin\Debug\net6.0-windows\kurnik.dll
+C:\Users\operak\source\repos\kurnik\kurnik\bin\Debug\net6.0-windows\kurnik.pdb
+C:\Users\operak\source\repos\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.csproj.AssemblyReference.cache
+C:\Users\operak\source\repos\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.Form1.resources
+C:\Users\operak\source\repos\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.vejce.resources
+C:\Users\operak\source\repos\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.csproj.GenerateResource.cache
+C:\Users\operak\source\repos\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\operak\source\repos\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.AssemblyInfoInputs.cache
+C:\Users\operak\source\repos\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.AssemblyInfo.cs
+C:\Users\operak\source\repos\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.csproj.CoreCompileInputs.cache
+C:\Users\operak\source\repos\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.dll
+C:\Users\operak\source\repos\kurnik\kurnik\obj\Debug\net6.0-windows\refint\kurnik.dll
+C:\Users\operak\source\repos\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.pdb
+C:\Users\operak\source\repos\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.genruntimeconfig.cache
+C:\Users\operak\source\repos\kurnik\kurnik\obj\Debug\net6.0-windows\ref\kurnik.dll
+C:\Users\operak\source\repos\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.Properties.Resources.resources
+C:\Users\operak\source\repos\kurnik\kurnik\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\operak\source\repos\kurnik\kurnik\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\operak\source\repos\kurnik\kurnik\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\operak\source\repos\kurnik\kurnik\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\operak\source\repos\kurnik\kurnik\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\operak\source\repos\kurnik\kurnik\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\operak\source\repos\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.csproj.CopyComplete
+C:\Users\operak\source\repos\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.sklad.resources
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\bin\Debug\net6.0-windows\kurnik.exe
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\bin\Debug\net6.0-windows\kurnik.deps.json
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\bin\Debug\net6.0-windows\kurnik.runtimeconfig.json
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\bin\Debug\net6.0-windows\kurnik.dll
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\bin\Debug\net6.0-windows\kurnik.pdb
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.csproj.AssemblyReference.cache
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.Form1.resources
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.Properties.Resources.resources
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.sklad.resources
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.vejce.resources
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.csproj.GenerateResource.cache
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.AssemblyInfoInputs.cache
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.AssemblyInfo.cs
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.csproj.CoreCompileInputs.cache
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.csproj.CopyComplete
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.dll
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\obj\Debug\net6.0-windows\refint\kurnik.dll
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.pdb
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\obj\Debug\net6.0-windows\kurnik.genruntimeconfig.cache
+C:\Users\operak\source\repos\New folder\kurnik\kurnik\obj\Debug\net6.0-windows\ref\kurnik.dll
