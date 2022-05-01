@@ -422,13 +422,18 @@ namespace kurnik
             SqlDataAdapter dataadp = new SqlDataAdapter(cmd);
 
             //cmd.CommandText = "select * from [Table]";
-            den = Convert.ToString(datum.DayOfWeek);
-            prodano = Int32.Parse(txtB_EditProdano.Text);
-            cena = Double.Parse(txtB_EditCena.Text);
-            darovano = Int32.Parse(txtB_EditDarovano.Text);
-            cmd.CommandText = "Update [vejce] set Den='" + den + "',Datum='" + datum + "',hneda='" + hneda + "',zelena = '" + zelena + "',bila = '" + bila + "',kremova = '" + kremova + "',CelkemVajec = '" + ksCelkem + "',Prodano = '" + prodano + "',Cena = '" + cena + "',Darovano = '" + darovano + "' where id = '" + id + "'";
-            cmd.ExecuteNonQuery();
-            reloadSql();
+            int parseTry;
+            if (int.TryParse(txtB_EditHneda.Text, out parseTry) && int.TryParse(txtB_EditZelena.Text, out parseTry) && int.TryParse(txtB_EditBila.Text, out parseTry) && int.TryParse(txtB_EditKremova.Text, out parseTry) && int.TryParse(txtB_EditCena.Text, out parseTry) && int.TryParse(txtB_EditProdano.Text, out parseTry) && int.TryParse(txtB_EditDarovano.Text, out parseTry))
+            {
+                den = Convert.ToString(datum.DayOfWeek);
+                prodano = Int32.Parse(txtB_EditProdano.Text);
+                cena = Double.Parse(txtB_EditCena.Text);
+                darovano = Int32.Parse(txtB_EditDarovano.Text);
+                cmd.CommandText = "Update [vejce] set Den='" + den + "',Datum='" + datum + "',hneda='" + hneda + "',zelena = '" + zelena + "',bila = '" + bila + "',kremova = '" + kremova + "',CelkemVajec = '" + ksCelkem + "',Prodano = '" + prodano + "',Cena = '" + cena + "',Darovano = '" + darovano + "' where id = '" + id + "'";
+                cmd.ExecuteNonQuery();
+                reloadSql();
+            }
+            else { MessageBox.Show("Jedna z políček je prázdné, nebo neplatné!", "Chyba", MessageBoxButtons.OK); }
             connection.Close();
         }
         // --picture box edit confirm --\\ 
