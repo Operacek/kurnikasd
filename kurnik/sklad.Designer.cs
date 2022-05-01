@@ -96,6 +96,7 @@
             this.vybaveni.TabIndex = 1;
             this.vybaveni.Text = "vybaveni";
             this.vybaveni.UseVisualStyleBackColor = true;
+            this.vybaveni.Click += new System.EventHandler(this.vybaveni_Click);
             // 
             // doplnky
             // 
@@ -105,6 +106,7 @@
             this.doplnky.TabIndex = 2;
             this.doplnky.Text = "doplnky";
             this.doplnky.UseVisualStyleBackColor = true;
+            this.doplnky.Click += new System.EventHandler(this.doplnky_Click);
             // 
             // prehledPolozek
             // 

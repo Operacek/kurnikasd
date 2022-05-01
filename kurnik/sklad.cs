@@ -360,6 +360,38 @@ namespace kurnik
             connection.Close();
         }
 
+        private void vybaveni_Click(object sender, EventArgs e)
+        {
+            connection.Close();
+            connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            DataTable dta = new DataTable();
+            SqlDataAdapter dataadp = new SqlDataAdapter(cmd);
+            cmd.CommandText = "select * from [sklad] where kategorie = 'vybaveni'  order by datum ";
+            dataadp = new SqlDataAdapter(cmd);
+            dataadp.Fill(dta);
+            grid_Sklad.DataSource = dta;
+            grid_Sklad.Columns["id"].Visible = false;
+            connection.Close();
+        }
+
+        private void doplnky_Click(object sender, EventArgs e)
+        {
+            connection.Close();
+            connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            DataTable dta = new DataTable();
+            SqlDataAdapter dataadp = new SqlDataAdapter(cmd);
+            cmd.CommandText = "select * from [sklad] where kategorie = 'doplnky'  order by datum ";
+            dataadp = new SqlDataAdapter(cmd);
+            dataadp.Fill(dta);
+            grid_Sklad.DataSource = dta;
+            grid_Sklad.Columns["id"].Visible = false;
+            connection.Close();
+        }
+
 
         // -- txt changed \\
 
