@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XT797qHHIp1n/3M0Y/kUbP58mGT5W5eh0AqN5ZGqjGT8jX09OEkQ5Y5qT4pZWg2RjU+KgffQjQ0ROsaxn/WsCw==",
+  "dgSpecHash": "HR6XBlH0j8kA3Bh4LUEGviAQ82MHYvwhi8nfqFcU5yB0qLgCtI0Il/9NYqg8KpLCRKPJAHkvcleyMY0YrC/KYA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\operak\\Desktop\\kurnik\\kurnik\\kurnik.csproj",
+  "projectFilePath": "C:\\csharp\\kurnikasd\\kurnik\\kurnik.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\operak\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\operak\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

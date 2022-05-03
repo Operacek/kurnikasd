@@ -460,11 +460,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\operak\\Desktop\\kurnik\\kurnik\\kurnik.csproj",
+      "projectUniqueName": "C:\\csharp\\kurnikasd\\kurnik\\kurnik.csproj",
       "projectName": "kurnik",
-      "projectPath": "C:\\Users\\operak\\Desktop\\kurnik\\kurnik\\kurnik.csproj",
+      "projectPath": "C:\\csharp\\kurnikasd\\kurnik\\kurnik.csproj",
       "packagesPath": "C:\\Users\\operak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\operak\\Desktop\\kurnik\\kurnik\\obj\\",
+      "outputPath": "C:\\csharp\\kurnikasd\\kurnik\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
