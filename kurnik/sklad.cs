@@ -64,8 +64,14 @@ namespace kurnik
             dataadp.Fill(dta);
             grid_Sklad.DataSource = dta;
             grid_Sklad.Columns["id"].Visible = false;
+            grid_Sklad.Columns["datum"].Visible = false;
+            grid_Sklad.Columns["kusy"].Visible = false;
+            grid_Sklad.Columns["cenazakus"].Visible = false;
             connection.Close();
         }
+
+
+
 
 
         // datagrid click event
@@ -76,7 +82,7 @@ namespace kurnik
              
             
             date = Convert.ToDateTime(grid_Sklad.Rows[e.RowIndex].Cells["datum"].FormattedValue.ToString());
-            kategorie = grid_Sklad.Rows[e.RowIndex].Cells["kategorie"].FormattedValue.ToString();
+            kategorie = grid_Sklad.Rows[e.RowIndex].Cells["kategorasdie"].FormattedValue.ToString();
             polozka = grid_Sklad.Rows[e.RowIndex].Cells["polozka"].FormattedValue.ToString();
             hmotnost = grid_Sklad.Rows[e.RowIndex].Cells["hmotnost"].FormattedValue.ToString();
             cenaZaKus = Double.Parse(grid_Sklad.Rows[e.RowIndex].Cells["cenazakus"].FormattedValue.ToString());
@@ -89,9 +95,7 @@ namespace kurnik
                 date_sklad_edit.Value = date;                
                 txtb_sklad_edit_polozka.Text = polozka;
                 txtb_sklad_edit_hmotnost.Text = hmotnost;
-                txtb_sklad_edit_cenaZaKus.Text = cenaZaKus.ToString();
-                txtb_sklad_edit_kusy.Text = kusy.ToString();
-                txtb_sklad_edit_cenaCelkem.Text = cenaCelkem.ToString();
+                txtb_sklad_edit_cenaZaKus.Text = cenaZaKus.ToString();                
             }
         }
 
@@ -127,44 +131,11 @@ namespace kurnik
         private void txtBox_pridatPolozku_cenaZaKus_TextChanged(object sender, EventArgs e)
         {
 
-            Double intparse = 0;
-            if (txtBox_pridatPolozku_cenaZaKus.Text != null)
-            {
-                if (Double.TryParse(txtBox_pridatPolozku_cenaZaKus.Text, out intparse))
-                {
-                    cenaZaKus = Double.Parse(txtBox_pridatPolozku_cenaZaKus.Text);
-                    if (Double.TryParse(txtBox_pridatPolozku_kusy.Text, out intparse))
-                    {
-                        kusy = Double.Parse(txtBox_pridatPolozku_kusy.Text);
-                        cenaCelkem = kusy * cenaZaKus;
-                        txtBox_pridatPolozku_cenaCelkem.Text = cenaCelkem.ToString();
-                    }
-
-                    lbl_pridatPolozku_error.Visible = false;
-                }
-                else { lbl_pridatPolozku_error.Visible = true; }
-            }
         }
 
         private void txtBox_pridatPolozku_kusy_TextChanged(object sender, EventArgs e)
         {
-            Double intparse = 0;
-            if (txtBox_pridatPolozku_kusy.Text != null)
-            {
-                if (Double.TryParse(txtBox_pridatPolozku_kusy.Text, out intparse))
-                {
-                    kusy = Double.Parse(txtBox_pridatPolozku_kusy.Text);
-                    if (Double.TryParse(txtBox_pridatPolozku_cenaZaKus.Text, out intparse))
-                    {
-                        cenaZaKus = Double.Parse(txtBox_pridatPolozku_cenaZaKus.Text);
-                        cenaCelkem = kusy * cenaZaKus;
-                        txtBox_pridatPolozku_cenaCelkem.Text = cenaCelkem.ToString();
-                    }
 
-                    lbl_pridatPolozku_error.Visible = false;
-                }
-                else { lbl_pridatPolozku_error.Visible = true; }
-            }
         }
 
         private void txtBox_pridatPolozku_cenaCelkem_TextChanged(object sender, EventArgs e)
@@ -188,18 +159,16 @@ namespace kurnik
             //kategorie
             date = date_pridatPolozku.Value;
             Double tryparse;
-            if (Double.TryParse(txtBox_pridatPolozku_cenaCelkem.Text, out tryparse) && Double.TryParse(txtBox_pridatPolozku_kusy.Text, out tryparse) && Double.TryParse(txtBox_pridatPolozku_cenaZaKus.Text, out tryparse) && cBox_pridatPolozku_kategorie.Text != null && txtBox_pridatPolozku_polozka.Text != null && txtBox_pridatPolozku_hmotnost.Text != null && txtBox_pridatPolozku_cenaZaKus.Text != null && txtBox_pridatPolozku_kusy != null && cenaCelkem != null)
+            if (cBox_pridatPolozku_kategorie.Text != null && txtBox_pridatPolozku_polozka.Text != null && txtBox_pridatPolozku_hmotnost.Text != null && txtBox_pridatPolozku_cenaZaKus.Text != null && cenaCelkem != null)
             {
                 kategorie = cBox_pridatPolozku_kategorie.SelectedItem.ToString();
                 polozka = txtBox_pridatPolozku_polozka.Text;
                 hmotnost = txtBox_pridatPolozku_hmotnost.Text;
                 cenaZaKus = double.Parse(txtBox_pridatPolozku_cenaZaKus.Text);
-                kusy = double.Parse(txtBox_pridatPolozku_kusy.Text);
-                cenaCelkem = double.Parse(txtBox_pridatPolozku_cenaCelkem.Text);
 
                 connection.Open();
                 cmd = connection.CreateCommand();
-                cmd.CommandText = "insert into [sklad] (datum,kategorie,polozka,hmotnost,cenazakus,kusy,cenacelkem) values('" + date.Date + "','" + kategorie + "','" + polozka + "','" + hmotnost + "','" + cenaZaKus.ToString() + "','" + kusy.ToString() + "','" + cenaCelkem.ToString() + "')";
+                cmd.CommandText = "insert into [sklad] (datum,kategorie,polozka,hmotnost,cenazakus,kusy,cenacelkem) values('" + date.Date + "','" + kategorie + "','" + polozka + "','" + hmotnost + "','0','0','0')";
                 cmd.ExecuteNonQuery();
                 reloadSql();
                 connection.Close();
@@ -256,44 +225,10 @@ namespace kurnik
         private void txtb_sklad_edit_cenaZaKus_TextChanged(object sender, EventArgs e)
         {
 
-            Double intparse = 0;
-            if (txtb_sklad_edit_cenaZaKus.Text != null)
-            {
-                if (Double.TryParse(txtb_sklad_edit_cenaZaKus.Text, out intparse))
-                {
-                    cenaZaKus = Double.Parse(txtb_sklad_edit_cenaZaKus.Text);
-                    if (Double.TryParse(txtb_sklad_edit_kusy.Text, out intparse))
-                    {
-                        kusy = Double.Parse(txtb_sklad_edit_kusy.Text);
-                        cenaCelkem = kusy * cenaZaKus;
-                        txtb_sklad_edit_cenaCelkem.Text = cenaCelkem.ToString();
-                    }
-
-                    lbl_sklad_edit_error.Visible = false;
-                }
-                else { lbl_sklad_edit_error.Visible = true; }
-            }
         }
 
         private void txtb_sklad_edit_kusy_TextChanged(object sender, EventArgs e)
         {
-            Double intparse = 0;
-            if (txtb_sklad_edit_kusy.Text != null)
-            {
-                if (Double.TryParse(txtb_sklad_edit_kusy.Text, out intparse))
-                {
-                    kusy = Double.Parse(txtb_sklad_edit_kusy.Text);
-                    if (Double.TryParse(txtb_sklad_edit_cenaZaKus.Text, out intparse))
-                    {
-                        cenaZaKus = Double.Parse(txtb_sklad_edit_cenaZaKus.Text);
-                        cenaCelkem = kusy * cenaZaKus;
-                        txtb_sklad_edit_cenaCelkem.Text = cenaCelkem.ToString();
-                    }
-
-                    lbl_sklad_edit_error.Visible = false;
-                }
-                else { lbl_sklad_edit_error.Visible = true; }
-            }
         }
 
         private void txtb_sklad_edit_cenaCelkem_TextChanged(object sender, EventArgs e)
@@ -311,8 +246,9 @@ namespace kurnik
         private void prehledPolozek_Click(object sender, EventArgs e)
         {
             reloadSql();
-            pnl_sklad_edit.Show();
-            pnl_sklad_pridatPolozku.Show();
+            pnl_sklad_edit.Hide();
+            pnl_sklad_pridatPolozku.Hide();
+            pnl_sklad_home.Show();
         }
 
         private void pnl_sklad_edit_confirm_Click(object sender, EventArgs e)
@@ -321,18 +257,16 @@ namespace kurnik
             date = date_sklad_edit.Value;
 
             double doubleparse;
-            if (cbox_edit_kategorie.Text != null && txtb_sklad_edit_polozka.Text != null && txtb_sklad_edit_hmotnost.Text != null && Double.TryParse(txtb_sklad_edit_cenaZaKus.Text, out doubleparse) && Double.TryParse(txtb_sklad_edit_kusy.Text, out doubleparse) && Double.TryParse(txtb_sklad_edit_cenaCelkem.Text, out doubleparse))
+            if (cbox_edit_kategorie.Text != null && txtb_sklad_edit_polozka.Text != null && txtb_sklad_edit_hmotnost.Text != null && Double.TryParse(txtb_sklad_edit_cenaZaKus.Text, out doubleparse))
             {
                 kategorie = cbox_edit_kategorie.SelectedItem.ToString();
                 polozka = txtb_sklad_edit_polozka.Text;
                 hmotnost = txtb_sklad_edit_hmotnost.Text;
                 cenaZaKus = Double.Parse(txtb_sklad_edit_cenaZaKus.Text);
-                kusy = Double.Parse(txtb_sklad_edit_kusy.Text);
-                cenaCelkem = Double.Parse(txtb_sklad_edit_cenaCelkem.Text);
                 connection.Close();
                 connection.Open();
                 cmd = connection.CreateCommand();
-                cmd.CommandText = "update [sklad] set datum = '" + date.Date + "', kategorie = '" + kategorie + "', polozka = '"+polozka+"',hmotnost = '" + hmotnost + "', cenazakus = '" + cenaZaKus.ToString() + "', kusy = '" + kusy.ToString() + "', cenacelkem = '" + cenaCelkem.ToString() + "' where id = '" + id + "'";
+                cmd.CommandText = "update [sklad] set datum = '" + date.Date + "', kategorie = '" + kategorie + "', polozka = '"+polozka+"',hmotnost = '" + hmotnost + "', cenazakus = '" + cenaZaKus.ToString() + "' where id = '" + id + "'";
                 cmd.ExecuteNonQuery();
                 reloadSql();
                 connection.Close();
@@ -359,6 +293,8 @@ namespace kurnik
             grid_Sklad.DataSource = dta;
             grid_Sklad.Columns["id"].Visible = false;
             connection.Close();
+            pnl_sklad_edit.Show();
+            pnl_sklad_pridatPolozku.Show();
         }
 
         private void vybaveni_Click(object sender, EventArgs e)
@@ -375,7 +311,8 @@ namespace kurnik
             grid_Sklad.DataSource = dta;
             grid_Sklad.Columns["id"].Visible = false;
             connection.Close();
-                
+            pnl_sklad_edit.Show();
+            pnl_sklad_pridatPolozku.Show();
 
         }
 
@@ -393,6 +330,62 @@ namespace kurnik
             grid_Sklad.DataSource = dta;
             grid_Sklad.Columns["id"].Visible = false;
             connection.Close();
+            pnl_sklad_edit.Show();
+            pnl_sklad_pridatPolozku.Show();
+        }
+
+        private void btn_sklad_prehledPolozek_pridat_Click(object sender, EventArgs e)
+        {
+            pnl_sklad_edit.Hide();
+            pnl_sklad_pridatPolozku.Show();
+            pnl_sklad_home.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pnl_sklad_edit.Show();
+            pnl_sklad_pridatPolozku.Hide();
+            pnl_sklad_home.Hide();
+
+        }
+        private void btn_sklad_prehledPolozek_remove_Click(object sender, EventArgs e)
+        {
+            pnl_sklad_edit.Hide();
+            pnl_sklad_pridatPolozku.Hide();
+            if (grid_Sklad.SelectedRows.Count == 1)
+            {
+                DialogResult dr = MessageBox.Show("Opravdu chces odstranit řádek?", "Odstranění", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+
+                switch (dr)
+                {
+                    case DialogResult.Yes:
+                        connection.Open();
+                        SqlCommand cmd = connection.CreateCommand();
+                        cmd.CommandType = CommandType.Text;
+
+                        cmd.CommandText = "DELETE FROM [sklad] WHERE id='" + id + "'";
+                        cmd.ExecuteNonQuery();
+                        reloadSql();
+                        break;
+                    case DialogResult.No:
+                        break;
+                }
+            }
+            else { MessageBox.Show("Označ řádek pro odstranění!", "Chyba", MessageBoxButtons.OK); }
+        }
+
+        private void btn_sklad_edit_home_Click(object sender, EventArgs e)
+        {
+            pnl_sklad_edit.Hide();
+            pnl_sklad_pridatPolozku.Hide();
+            pnl_sklad_home.Show();
+        }
+
+        private void btn_sklad_add_home_Click(object sender, EventArgs e)
+        {
+            pnl_sklad_edit.Hide();
+            pnl_sklad_pridatPolozku.Hide();
+            pnl_sklad_home.Show();
         }
 
 

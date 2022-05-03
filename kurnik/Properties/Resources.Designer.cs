@@ -73,6 +73,16 @@ namespace kurnik.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blue_home_page_icon_png_icon_png_button_home_11563017221o3yywd2nlp {
+            get {
+                object obj = ResourceManager.GetObject("blue-home-page-icon-png-icon-png-button-home-11563017221o3yywd2nlp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap circle_compose_draw_edit_write_icon_728133 {
             get {
                 object obj = ResourceManager.GetObject("circle-compose-draw-edit-write-icon-728133", resourceCulture);
