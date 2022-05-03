@@ -374,6 +374,8 @@ namespace kurnik
             grid_Sklad.DataSource = dta;
             grid_Sklad.Columns["id"].Visible = false;
             connection.Close();
+
+
         }
 
         private void doplnky_Click(object sender, EventArgs e)
