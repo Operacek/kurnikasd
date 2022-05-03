@@ -340,7 +340,7 @@ namespace kurnik
             else
             {
                
-                MessageBox.Show("Špatasdně zadané hodnoty!", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Špatně zadané hodnoty!", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }
