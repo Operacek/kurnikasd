@@ -339,7 +339,8 @@ namespace kurnik
             }
             else
             {
-                MessageBox.Show("Špatně zadané hodnoty!", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               
+                MessageBox.Show("Špatasdně zadané hodnoty!", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }
