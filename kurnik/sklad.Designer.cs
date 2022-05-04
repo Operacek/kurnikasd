@@ -66,10 +66,14 @@
             this.btn_sklad_prehledPolozek_pridat = new System.Windows.Forms.Button();
             this.btn_sklad_prehledPolozek_edit = new System.Windows.Forms.Button();
             this.btn_sklad_prehledPolozek_remove = new System.Windows.Forms.Button();
+            this.pnl_sklad_doplnky_menu = new System.Windows.Forms.Panel();
+            this.btn_sklad_doplnky_menu_add = new System.Windows.Forms.Button();
+            this.btn_sklad_doplnky_menu_remove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grid_Sklad)).BeginInit();
             this.pnl_sklad_pridatPolozku.SuspendLayout();
             this.pnl_sklad_edit.SuspendLayout();
             this.pnl_sklad_home.SuspendLayout();
+            this.pnl_sklad_doplnky_menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // grid_Sklad
@@ -467,6 +471,39 @@
             this.btn_sklad_prehledPolozek_remove.UseVisualStyleBackColor = true;
             this.btn_sklad_prehledPolozek_remove.Click += new System.EventHandler(this.btn_sklad_prehledPolozek_remove_Click);
             // 
+            // pnl_sklad_doplnky_menu
+            // 
+            this.pnl_sklad_doplnky_menu.Controls.Add(this.btn_sklad_doplnky_menu_remove);
+            this.pnl_sklad_doplnky_menu.Controls.Add(this.btn_sklad_doplnky_menu_add);
+            this.pnl_sklad_doplnky_menu.Location = new System.Drawing.Point(12, 400);
+            this.pnl_sklad_doplnky_menu.Name = "pnl_sklad_doplnky_menu";
+            this.pnl_sklad_doplnky_menu.Size = new System.Drawing.Size(731, 128);
+            this.pnl_sklad_doplnky_menu.TabIndex = 21;
+            this.pnl_sklad_doplnky_menu.Visible = false;
+            // 
+            // btn_sklad_doplnky_menu_add
+            // 
+            this.btn_sklad_doplnky_menu_add.BackgroundImage = global::kurnik.Properties.Resources.add;
+            this.btn_sklad_doplnky_menu_add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_sklad_doplnky_menu_add.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_sklad_doplnky_menu_add.Location = new System.Drawing.Point(217, 21);
+            this.btn_sklad_doplnky_menu_add.Name = "btn_sklad_doplnky_menu_add";
+            this.btn_sklad_doplnky_menu_add.Size = new System.Drawing.Size(80, 80);
+            this.btn_sklad_doplnky_menu_add.TabIndex = 21;
+            this.btn_sklad_doplnky_menu_add.UseVisualStyleBackColor = true;
+            this.btn_sklad_doplnky_menu_add.Click += new System.EventHandler(this.btn_sklad_doplnky_menu_add_Click);
+            // 
+            // btn_sklad_doplnky_menu_remove
+            // 
+            this.btn_sklad_doplnky_menu_remove.BackgroundImage = global::kurnik.Properties.Resources.delete_icon_symbol_first_aid_sign_logo_transparent_png_1426485;
+            this.btn_sklad_doplnky_menu_remove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_sklad_doplnky_menu_remove.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_sklad_doplnky_menu_remove.Location = new System.Drawing.Point(530, 22);
+            this.btn_sklad_doplnky_menu_remove.Name = "btn_sklad_doplnky_menu_remove";
+            this.btn_sklad_doplnky_menu_remove.Size = new System.Drawing.Size(80, 80);
+            this.btn_sklad_doplnky_menu_remove.TabIndex = 22;
+            this.btn_sklad_doplnky_menu_remove.UseVisualStyleBackColor = true;
+            // 
             // sklad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -477,6 +514,7 @@
             this.Controls.Add(this.doplnky);
             this.Controls.Add(this.vybaveni);
             this.Controls.Add(this.grid_Sklad);
+            this.Controls.Add(this.pnl_sklad_doplnky_menu);
             this.Controls.Add(this.pnl_sklad_home);
             this.Controls.Add(this.pnl_sklad_edit);
             this.Controls.Add(this.pnl_sklad_pridatPolozku);
@@ -488,6 +526,7 @@
             this.pnl_sklad_edit.ResumeLayout(false);
             this.pnl_sklad_edit.PerformLayout();
             this.pnl_sklad_home.ResumeLayout(false);
+            this.pnl_sklad_doplnky_menu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -532,5 +571,8 @@
         private Button btn_sklad_prehledPolozek_remove;
         private Button btn_sklad_edit_home;
         private Button btn_sklad_add_home;
+        private Panel pnl_sklad_doplnky_menu;
+        private Button btn_sklad_doplnky_menu_remove;
+        private Button btn_sklad_doplnky_menu_add;
     }
 }

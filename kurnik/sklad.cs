@@ -67,6 +67,8 @@ namespace kurnik
             grid_Sklad.Columns["datum"].Visible = false;
             grid_Sklad.Columns["kusy"].Visible = false;
             grid_Sklad.Columns["cenazakus"].Visible = false;
+            grid_Sklad.Columns["vydej"].Visible = false;
+
             connection.Close();
         }
 
@@ -82,7 +84,7 @@ namespace kurnik
              
             
             date = Convert.ToDateTime(grid_Sklad.Rows[e.RowIndex].Cells["datum"].FormattedValue.ToString());
-            kategorie = grid_Sklad.Rows[e.RowIndex].Cells["kategorasdie"].FormattedValue.ToString();
+            kategorie = grid_Sklad.Rows[e.RowIndex].Cells["kategorie"].FormattedValue.ToString();
             polozka = grid_Sklad.Rows[e.RowIndex].Cells["polozka"].FormattedValue.ToString();
             hmotnost = grid_Sklad.Rows[e.RowIndex].Cells["hmotnost"].FormattedValue.ToString();
             cenaZaKus = Double.Parse(grid_Sklad.Rows[e.RowIndex].Cells["cenazakus"].FormattedValue.ToString());
@@ -249,6 +251,12 @@ namespace kurnik
             pnl_sklad_edit.Hide();
             pnl_sklad_pridatPolozku.Hide();
             pnl_sklad_home.Show();
+            grid_Sklad.Columns["id"].Visible = false;
+            grid_Sklad.Columns["datum"].Visible = false;
+            grid_Sklad.Columns["kusy"].Visible = false;
+            grid_Sklad.Columns["cenazakus"].Visible = false;
+            grid_Sklad.Columns["vydej"].Visible = false;
+
         }
 
         private void pnl_sklad_edit_confirm_Click(object sender, EventArgs e)
@@ -386,6 +394,11 @@ namespace kurnik
             pnl_sklad_edit.Hide();
             pnl_sklad_pridatPolozku.Hide();
             pnl_sklad_home.Show();
+        }
+
+        private void btn_sklad_doplnky_menu_add_Click(object sender, EventArgs e)
+        {
+
         }
 
 
